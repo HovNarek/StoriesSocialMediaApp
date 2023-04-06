@@ -37,3 +37,5 @@ const app = express();
 app.get("/", (req, res) => {
     res.send('hello from express')
 })
+
+export default app
