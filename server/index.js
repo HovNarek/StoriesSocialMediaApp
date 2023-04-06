@@ -29,10 +29,11 @@
 // //
 // // mongoose.set('useFindAndModify', false);
 
-const app = require('express')();
+
+import express from 'express';
+
+const app = express();
 
 app.get("/", (req, res) => {
     res.send('hello from express')
 })
-
-module.exports = app
