@@ -17,11 +17,9 @@ export const getPosts = async (req, res) => {
 
         const response = { data: posts, currentPage: Number(page), numberOfPages: Math.ceil(total / LIMIT)};
 
-        console.log(`Response size: ${JSON.stringify(response).length}`);
-
-
         res.json(response);
-    } catch (error) {    
+    } catch (error) {
+        console.error(error);
         res.status(404).json({ message: error.message });
     }
 }
